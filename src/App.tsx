@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 import { ConstButton, FunctionButton } from "./components/Button";
+import { Counter } from "./components/Counter";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,15 +21,16 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
       <ConstButton label="ConstButton" onClick={() => alert("ConstButton Clicked!")} />
       <FunctionButton label="FunctionButton" onClick={() => alert("FunctionButton Clicked!")} />
+      <div>
+        <Counter />
+      </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </>
   );
